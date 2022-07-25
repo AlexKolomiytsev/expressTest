@@ -8,8 +8,9 @@ router.get('/', function(req, res, next) {
 
 router.get('/set-cookie', function (req, res) {
   res
-    .cookie('rememberme', '12222222', { maxAge: 9000000, httpOnly: true, sameSite : "none" })
-    .cookie('anotherone', '777777777799999999', { maxAge: 9000000, httpOnly: true, sameSite : "none", })
+    .cookie('rememberme', '12222222', { maxAge: 9000000, httpOnly: true, sameSite: false })
+    .cookie('anotherone', '777777777799999999', { maxAge: 9000000, httpOnly: true, sameSite: false })
+    .cookie('anotheronetwo', '666666666666666', { maxAge: 9000000, httpOnly: true, sameSite: false })
 
   res.send('Hola');
 });
@@ -21,8 +22,9 @@ router.get('/read-cookie', function (req, res) {
   res
     .json({
       message: 'cookie read',
-      cookie: req.cookies.rememberme,
-      cookie2: req.cookies.anotherone
+      rememberme: req.cookies.rememberme,
+      anotherone: req.cookies.anotherone,
+      anotheronetwo: req.cookies.anotheronetwo
     })
 });
 
