@@ -22,7 +22,7 @@ router.get('/read-cookie', function (req, res) {
     .json({
       message: 'cookie read',
       cookie: req.cookies.rememberme,
-      cookie2: req.cookies.rememberme2
+      cookie2: req.cookies.anotherone
     })
 });
 
