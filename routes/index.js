@@ -9,6 +9,7 @@ router.get('/', function(req, res, next) {
 router.get('/set-cookie', function (req, res) {
   res
     .cookie('rememberme', '12222222', { maxAge: 9000000, httpOnly: true })
+    .cookie('anotherone', '777777777799999999', { maxAge: 9000000, httpOnly: true })
 
   res.send('Hola');
 });
@@ -20,7 +21,7 @@ router.get('/read-cookie', function (req, res) {
   res
     .json({
       message: 'cookie read',
-      cookie: req.cookies.rememberme
+      cookie: req.cookies
     })
 });
 
