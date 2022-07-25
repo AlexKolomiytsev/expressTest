@@ -8,8 +8,8 @@ router.get('/', function(req, res, next) {
 
 router.get('/set-cookie', function (req, res) {
   res
-    .cookie('rememberme', '12222222', { maxAge: 9000000, httpOnly: true })
-    .cookie('anotherone', '777777777799999999', { maxAge: 9000000, httpOnly: true })
+    .cookie('rememberme', '12222222', { maxAge: 9000000, httpOnly: true, sameSite : "none" })
+    .cookie('anotherone', '777777777799999999', { maxAge: 9000000, httpOnly: true, sameSite : "none", })
 
   res.send('Hola');
 });
