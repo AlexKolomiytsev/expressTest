@@ -21,7 +21,8 @@ router.get('/read-cookie', function (req, res) {
   res
     .json({
       message: 'cookie read',
-      cookie: req.cookies
+      cookie: req.cookies.rememberme,
+      cookie2: req.cookies.rememberme2
     })
 });
 
