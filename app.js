@@ -10,7 +10,9 @@ var usersRouter = require('./routes/users');
 const cors = require('cors');
 
 const corsOptions = {
-  origin: true,
+  origin: [
+    'http://localhost:3000',
+  ],
   optionsSuccessStatus: 200,
   credentials: true
 };
