@@ -47,6 +47,8 @@ router.get('/test-cors', (req, res) => {
   res.json({
     message: 'Hurray!! You bypassed cors!!!',
     headers: req.headers,
+    Referer1: req.headers.referer,
+    Referer2: req.headers.Referer,
   })
 })
 
