@@ -43,4 +43,10 @@ router.get('/read-cookie', function (req, res) {
     })
 });
 
+router.get('/test-cors', (req, res) => {
+  res.json({
+    message: 'hurray!!!!!'
+  })
+})
+
 module.exports = router;
