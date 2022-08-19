@@ -11,7 +11,7 @@ const cors = require('cors');
 
 const corsOptions = {
   origin: [
-    'http://test.com',
+    'https://my.testbackend.com',
   ],
   optionsSuccessStatus: 200,
   credentials: true
