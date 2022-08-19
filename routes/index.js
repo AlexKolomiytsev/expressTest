@@ -45,7 +45,8 @@ router.get('/read-cookie', function (req, res) {
 
 router.get('/test-cors', (req, res) => {
   res.json({
-    message: 'hurray!!!!!12'
+    message: 'Hurray!! You bypassed cors!!!',
+    headers: req.headers,
   })
 })
 
